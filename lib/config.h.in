@@ -596,7 +596,7 @@
 #undef const
 
 /* type to use in place of in_addr_t if not defined */
-#undef in_addr_t
+// #undef in_addr_t
 
 /* Define to `unsigned' if <sys/types.h> does not define. */
 #undef size_t
