@@ -4,7 +4,8 @@ I have cleaned them up, in part because I added gethostbyname/addr to newlib its
 To build configure the source with:
 
 LDFLAGS="-L$(psp-config --psp-prefix)/lib -L$(psp-config --pspsdk-path)/lib" \
-	 	LIBS="-lc -lpspnet_inet -lpspnet_resolver -lpspuser" \
+		CFLAGS="-I$(psp-config --pspsdk-path)/include" \
+		LIBS="-lc -lpspnet_inet -lpspnet_resolver -lpspuser" \
 	 	./configure --host=psp --disable-shared --prefix=$(psp-config --psp-prefix)
 
 Then just:
